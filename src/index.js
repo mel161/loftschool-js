@@ -53,15 +53,15 @@ function reduce(array, fn, initial = array[0]) {
    upperProps({ name: 'Сергей', lastName: 'Петров' }) вернет ['NAME', 'LASTNAME']
  */
 function upperProps(obj) {
-    var result = [];
+    var _result = [];
 
     for (var title in obj) {
         if ({}.hasOwnProperty.call(obj, title)) {
-            result.push(title.toUpperCase());
+            _result.push(title.toUpperCase());
         }
     }
 
-    return result;
+    return _result;
 }
 
 /*
@@ -71,7 +71,7 @@ function upperProps(obj) {
  Посмотрите как работает slice и повторите это поведение для массива, который будет передан в параметре array
  */
 function slice(array, from = 0, to = array.length) {
-    var result = [];
+    var _result = [];
 
     if (from < 0 && from < -(array.length)) {
         from = 0;
@@ -88,10 +88,10 @@ function slice(array, from = 0, to = array.length) {
     }
 
     for (var i = from; i < to; i++) {
-        result.push(array[i]);
+        _result.push(array[i]);
     }
 
-    return result;
+    return _result;
 }
 
 /*
@@ -101,7 +101,6 @@ function slice(array, from = 0, to = array.length) {
  Proxy должен перехватывать все попытки записи значений свойств и возводить это значение в квадрат
  */
 function createProxy(obj) {
-
     return obj;
 }
 
