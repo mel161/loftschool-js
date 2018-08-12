@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drag'n'Drop</title>
+    <style media="screen">
+      body {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+      }
+
+      #homework-container > div {
+        filter: drop-shadow(0 0 10px #ccc);
+      }
+      #homework-container > div.drag {
+        opacity: .7;        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="homework-container">
+      <button type="button" name="addDiv" id="addDiv">Добавить</button>
+    </div>
+    <script src="dnd.js" charset="utf-8"></script>
+  </body>
+</html>
